@@ -4,7 +4,7 @@ import { Provider } from '@/app/utils/provider'
 import { font_heading, font_text, font_accent } from '@/app/utils/fonts'
 import './globals.css'
 
-import Navbar from '@/components/nav/navbar'
+
 
 export const metadata: Metadata = {
 	title: {
@@ -24,11 +24,11 @@ export default function RootLayout({
 			<body
 				className={`${font_heading} ${font_text} ${font_accent} font-text bg-bgLight-400  dark:bg-bgDark-600 text-fontDark dark:text-fontLight selection:bg-ownTurquise-400 duration-300 antialiased`}>
 				<Provider>
-					<Navbar />
+			
 
 					{children}
 
-					{/* <Footer /> */}
+				
 				</Provider>
 			</body>
 		</html>
