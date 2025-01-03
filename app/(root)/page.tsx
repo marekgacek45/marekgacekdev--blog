@@ -6,7 +6,7 @@ import { Post, Category } from '@/sanity/lib/interface'
 import Hero from '@/components/hero'
 import LinkBtn from '@/components/link-btn'
 import FilterList from '@/components/filter-list'
-import PostCard from '@/components/post-card'
+import PostsGrid from '@/components/posts-grid'
 
 export const revalidate = 60
 
@@ -37,22 +37,14 @@ export default async function Blog() {
 				<section className='max-w-screen-2xl mx-auto pb-16'>
 					<FilterList title='Categories'>
 						{categories.map((category, index) => (
-							<LinkBtn key={index} small href={`/blog/category/${category.slug}`}>
+							<LinkBtn key={index} small href={`/category/${category.slug}`}>
 								{category.title}
 							</LinkBtn>
 						))}
 					</FilterList>
 				</section>
 				{/* posts */}
-				<section className=' mx-auto'>
-				<div
-				className='grid lg:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 gap-x-8 gap-y-16
-					'>
-				{posts.map((post, index) => (
-					<PostCard key={index} post={post} />
-				))}
-			</div>
-				</section>
+				<PostsGrid posts={posts} />
 			</main>
 		</>
 	)

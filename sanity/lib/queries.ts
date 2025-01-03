@@ -30,3 +30,20 @@ export const GET_ALL_POSTS = async () => {
 	})
 	return data
 }
+
+export const GET_POSTS_BY_CATEGORY = async (category: string) => {
+	const query = `
+    *[_type == "post" && references(*[_type == "category" && slug.current == "${category}"]._id)] | order(publishedAt desc) {
+    title,
+    "slug": slug.current,
+    thumbnail,
+    excerpt
+  
+}`
+
+	const data = await sanityFetch({
+		query: query,
+		revalidate: 60,
+	})
+	return data
+}
