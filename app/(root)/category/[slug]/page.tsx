@@ -15,26 +15,32 @@ function capitalizeFirstLetter(text: string) {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
+
+	const {slug} = await params
+
 	return {
-		title: `${capitalizeFirstLetter(params.slug)} Posts`,
+		title: `${capitalizeFirstLetter(slug)} Posts`,
 		description: `Explore Marek Gacek's blog for expert insights on web development, programming tutorials, and the latest in tech trends. Stay updated with tips, tools, and techniques.`,
 		openGraph: {
-			title: `${capitalizeFirstLetter(params.slug)}  Posts | Marek Gacek - Web Development & Programming`,
+			title: `${capitalizeFirstLetter(slug)}  Posts | Marek Gacek - Web Development & Programming`,
 			description:
 				"Explore Marek Gacek's blog for expert insights on web development, programming tutorials, and the latest in tech trends. Stay updated with tips, tools, and techniques.",
 			type: 'website',
 			locale: 'en_US',
-			url: `https://marekgacekdev.pl/blog/category${params.slug}`,
+			url: `https://marekgacekdev.pl/blog/category${slug}`,
 			siteName: 'Marek Gacek - FullStack Developer',
 		},
 	}
 }
 
-export default async function Blog(props: { params: { slug: string } }) {
-	const categories: Category[] = await GET_CATEGORIES_WITH_POSTS()
-	const posts: Post[] = await GET_POSTS_BY_CATEGORY(props.params.slug)
+export default async function Blog({params}: { params: { slug: string } }) {
 
-	if (!categories.find(category => category.slug === props.params.slug)) notFound()
+	const {slug} = await params
+
+	const categories: Category[] = await GET_CATEGORIES_WITH_POSTS()
+	const posts: Post[] = await GET_POSTS_BY_CATEGORY(slug)
+
+	if (!categories.find(category => category.slug === slug)) notFound()
 
 	return (
 		<>
@@ -42,7 +48,7 @@ export default async function Blog(props: { params: { slug: string } }) {
 				title='Blog'
 				marqueeText={
 					<>
-						posts from category <ColorSpan>{props.params.slug}</ColorSpan>
+						posts from category <ColorSpan>{slug}</ColorSpan>
 					</>
 				}
 			/>
@@ -59,7 +65,7 @@ export default async function Blog(props: { params: { slug: string } }) {
 								key={index}
 								small
 								href={`/category/${category.slug}`}
-								className={`${props.params.slug === category.slug ? 'bg-ownTurquise-400 hover:bg-ownTurquise-600' : ''}`}>
+								className={`${slug === category.slug ? 'bg-ownTurquise-400 hover:bg-ownTurquise-600' : ''}`}>
 								{category.title}
 							</LinkBtn>
 						))}

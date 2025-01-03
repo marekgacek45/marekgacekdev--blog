@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const PostCard = ({post}: { post: Post }) => {
 	return (
-		<Link href={`/blog/${post.slug}`} className='space-y-4'>
+		<Link href={`/${post.slug}`} className='space-y-4'>
 			<Image
 				src={urlFor(post.thumbnail).url()}
 				alt={post.title}

@@ -47,3 +47,36 @@ export const GET_POSTS_BY_CATEGORY = async (category: string) => {
 	})
 	return data
 }
+
+export const GET_POST_BY_SLUG = async (slug: string) => {
+    const query = `
+    *[_type == "post" && slug.current == "${slug}"][0]{
+    title,
+    "slug": slug.current,
+    thumbnail,
+    excerpt,
+    content,
+    publishedAt,
+    categories[]->{title, slug},
+      }`
+      const data = await sanityFetch({
+		query: query,
+		revalidate: 60,
+	})
+	return data
+}
+export const GET_OTHER_POSTS = async (slug: string) => {
+    const query = `*[_type == "post" && slug.current != "${slug}"] | order(publishedAT asc)[0...4]{
+        title,
+        "slug": slug.current,
+        thumbnail,
+        publishedAt,
+        categories[]->{title, "slug": slug.current}
+    }`
+
+    const data = await sanityFetch({
+		query: query,
+		revalidate: 60,
+	})
+	return data
+}

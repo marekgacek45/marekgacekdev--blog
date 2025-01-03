@@ -21,6 +21,9 @@ body {
 }
 
 @layer utilities {
+  .heading{
+    @apply text-4xl sm:text-6xl uppercase font-heading
+  }
   .text{
     @apply text-xl sm:text-2xl leading-normal
   }

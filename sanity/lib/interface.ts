@@ -1,7 +1,7 @@
 export interface Category {
 	_id: string
 	title: string
-	slug: string
+	slug?: string | { current: string }
 }
 
 export interface Post {
