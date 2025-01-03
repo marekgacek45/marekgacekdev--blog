@@ -22,8 +22,8 @@ export const YouTubeIcon = (props: { className?: string }) => {
 export const GitHubIcon = (props: { className?: string }) => {
 	return (
 		<svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' className={props.className}>
-			<g id='SVGRepo_bgCarrier' stroke-width='0'></g>
-			<g id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'></g>
+			<g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
+			<g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'></g>
 			<g id='SVGRepo_iconCarrier'>
 				{' '}
 				<path
@@ -41,17 +41,17 @@ export const FacebookIcon = (props: { className?: string }) => {
 	return (
 		
 		
-		<svg viewBox="0 0 24 24" className={props.className} xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H12V13H11C10.4477 13 10 12.5523 10 12C10 11.4477 10.4477 11 11 11H12V9.5C12 7.567 13.567 6 15.5 6H16.1C16.6523 6 17.1 6.44772 17.1 7C17.1 7.55228 16.6523 8 16.1 8H15.5C14.6716 8 14 8.67157 14 9.5V11H16.1C16.6523 11 17.1 11.4477 17.1 12C17.1 12.5523 16.6523 13 16.1 13H14V20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6Z" className={props.className}></path> </g></svg>
+		<svg viewBox="0 0 24 24" className={props.className} xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fillRule="evenodd" clipRule="evenodd" d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H12V13H11C10.4477 13 10 12.5523 10 12C10 11.4477 10.4477 11 11 11H12V9.5C12 7.567 13.567 6 15.5 6H16.1C16.6523 6 17.1 6.44772 17.1 7C17.1 7.55228 16.6523 8 16.1 8H15.5C14.6716 8 14 8.67157 14 9.5V11H16.1C16.6523 11 17.1 11.4477 17.1 12C17.1 12.5523 16.6523 13 16.1 13H14V20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6Z" className={props.className}></path> </g></svg>
 	)
 }
 
 export const LinkedinIcon = (props: { className?: string }) => {
 	return (
-		<svg className={`${props.className} jam jam-linkedin-square`} viewBox="-2 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z"></path><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"></path></g></svg>
+		<svg className={`${props.className} jam jam-linkedin-square`} viewBox="-2 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" ><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z"></path><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"></path></g></svg>
 	)
 }
 
 export const CopyIcon = (props: { className?: string }) => {
 	return (
-		<svg className={props.className} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16,32A16,16,0,0,0,32,16,16,16,0,0,0,4.69,4.69a16,16,0,0,0,0,22.62A15.86,15.86,0,0,0,16,32ZM6.1,6.1a14,14,0,0,1,19.8,0h0a14,14,0,1,1-19.8,0Z"></path> <path d="M16,25.18a9.15,9.15,0,0,0,6.49-2.69,1,1,0,0,0-1.41-1.41,7.18,7.18,0,1,1,0-10.16,1,1,0,0,0,1.41-1.41,9.17,9.17,0,0,0-13,0A9.18,9.18,0,0,0,16,25.18Z"></path> </g></svg>
+		<svg className={props.className} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16,32A16,16,0,0,0,32,16,16,16,0,0,0,4.69,4.69a16,16,0,0,0,0,22.62A15.86,15.86,0,0,0,16,32ZM6.1,6.1a14,14,0,0,1,19.8,0h0a14,14,0,1,1-19.8,0Z"></path> <path d="M16,25.18a9.15,9.15,0,0,0,6.49-2.69,1,1,0,0,0-1.41-1.41,7.18,7.18,0,1,1,0-10.16,1,1,0,0,0,1.41-1.41,9.17,9.17,0,0,0-13,0A9.18,9.18,0,0,0,16,25.18Z"></path> </g></svg>
 	)}

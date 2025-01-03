@@ -18,7 +18,7 @@ const ThemeToggler = (props: { className?: string; isScrolled?: boolean }) => {
 
 	return (
 		<button
-			className={`p-2 border border-transparent rounded-lg hover:bg-ownPink-400 hover:bg-opacity-10 duration-500 hover:border-ownPink-400  ${
+			className={`p-1 border border-transparent border-dashed hover:bg-ownPink-400 hover:bg-opacity-10 duration-500 hover:border-ownPink-400  ${
 				props.className
 			} `}
 			onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}
