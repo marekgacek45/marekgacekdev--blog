@@ -73,6 +73,6 @@ export const post = defineType({
                 },
             ],
         },
-        // { name: 'categories', title: 'Categories', type: 'array', of: [{ type: 'reference', to: { type: 'category' } }] },
+        { name: 'categories', title: 'Categories', type: 'array', of: [{ type: 'reference', to: { type: 'category' } }] },
     ],
 })
