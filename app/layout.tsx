@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import { Provider } from '@/app/utils/provider'
 
 import { font_heading, font_text, font_accent } from '@/app/utils/fonts'
+import { Provider } from '@/app/utils/provider'
 import { generateMetadata } from '@/lib/generateMetadata'
 
 import './globals.css'

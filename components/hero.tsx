@@ -1,7 +1,4 @@
-import React from 'react'
-
 import Marquee from 'react-fast-marquee'
-
 
 const Hero = ({title,marqueeText}: { title: string;  marqueeText: string | React.ReactNode; }) => {
 	return (

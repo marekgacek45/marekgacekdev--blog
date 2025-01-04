@@ -29,7 +29,7 @@ const Navbar = () => {
 	}
 
 	return (
-		<>
+		<header>
 			<nav className='fixed top-0 left-0 right-0 py-4 px-3 xs:px-6 sm:px-12 2xl:px-0 bg-ownYellow-400 dark:bg-ownPurple-400  shadow-slate-500 shadow-lg z-50 '>
 				{/* CONTAINER */}
 				<div className='max-w-screen-2xl mx-auto flex justify-between items-center'>
@@ -65,7 +65,7 @@ const Navbar = () => {
 				</div>
 			</nav>
 			{isOpen && <MobileMenu links={navLinks} socials={socialItems} onLinkClick={handleLinkClick} />}
-		</>
+		</header>
 	)
 }
 

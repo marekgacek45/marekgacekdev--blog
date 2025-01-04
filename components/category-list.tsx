@@ -1,6 +1,6 @@
-import React from 'react'
-import LinkBtn from '@/components/link-btn'
 import { Category } from '@/sanity/lib/interface'
+
+import LinkBtn from '@/components/link-btn'
 
 const PostCategoryList = ({ categories }: { categories: Category[] }) => {
 	return (

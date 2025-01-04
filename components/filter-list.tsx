@@ -1,4 +1,3 @@
-import React from 'react'
 
 const FilterList = ({ children, title }: { children: React.ReactNode; title: string }) => {
 	return (
