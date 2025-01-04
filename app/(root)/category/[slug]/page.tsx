@@ -7,6 +7,7 @@ import ColorSpan from '@/components/color-span'
 import FilterList from '@/components/filter-list'
 import PostsGrid from '@/components/posts-grid'
 import { GET_CATEGORIES_WITH_POSTS, GET_POSTS_BY_CATEGORY } from '@/sanity/lib/queries'
+import { Metadata } from 'next'
 
 export const revalidate = 60
 
@@ -14,24 +15,22 @@ function capitalizeFirstLetter(text: string) {
 	return text.charAt(0).toUpperCase() + text.slice(1)
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
 
-	const {slug} = await params
+
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | undefined> {
+	const { slug } = await params
+
 
 	return {
-		title: `${capitalizeFirstLetter(slug)} Posts`,
-		description: `Explore Marek Gacek's blog for expert insights on web development, programming tutorials, and the latest in tech trends. Stay updated with tips, tools, and techniques.`,
-		openGraph: {
-			title: `${capitalizeFirstLetter(slug)}  Posts | Marek Gacek - Web Development & Programming`,
-			description:
-				"Explore Marek Gacek's blog for expert insights on web development, programming tutorials, and the latest in tech trends. Stay updated with tips, tools, and techniques.",
-			type: 'website',
-			locale: 'en_US',
-			url: `https://marekgacekdev.pl/blog/category${slug}`,
-			siteName: 'Marek Gacek - FullStack Developer',
+		title: `${capitalizeFirstLetter(slug)} Posts `,
+		alternates: {
+			canonical: `https://blog.marekgacekdev.pl/category/${slug}`,
 		},
+		
 	}
 }
+
 
 export default async function Blog({params}: { params: { slug: string } }) {
 

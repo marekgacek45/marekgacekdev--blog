@@ -1,6 +1,4 @@
-import React from 'react'
 import type { Post } from '@/sanity/lib/interface'
-import { client } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
 import { PortableText } from '@portabletext/react'
 
@@ -15,34 +13,34 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { GET_OTHER_POSTS, GET_POST_BY_SLUG } from '@/sanity/lib/queries'
 
-
-
 export const revalidate = 60
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | undefined> {
 
-	const {slug} = await params
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | undefined> {
+	const { slug } = await params
 
 	const post: Post = await GET_POST_BY_SLUG(slug)
-	if (!post) {
-		return
-	}
+
 	return {
-		title: `${post.title}`,
-		description: post.excerpt,
+		title: `${post.title} `,
+		description: `${post.excerpt}`,
+		alternates: {
+			canonical: `https://blog.marekgacekdev.pl/${post.slug}`,
+		},
 		openGraph: {
-			title: `${post.title} | Marek Gacek - Web Development & Programming`,
-			description: post.excerpt,
+			title: `${post.title} | Marek Gacek Blog`,
+			description: `${post.excerpt}`,
 			type: 'article',
 			locale: 'en_US',
-			url: `https://marekgacekdev.pl/blog/blog/${post.slug}`,
-			siteName: 'Marek Gacek - FullStack Developer',
+			url: `https://blog.marekgacekdev.pl/${post.slug}`,
+			siteName: 'Marek Gacek Blog - FullStack Developer',
 			images: [
 				{
 					url: urlFor(post.thumbnail).url(),
 					width: 1200,
 					height: 630,
-					alt: `${post.title} thumbnail`,
+					alt: ` ${post.title} thumbnail`,
 				},
 			],
 		},
@@ -63,8 +61,7 @@ const myPortableTextComponents = {
 }
 
 const Post = async ({ params }: { params: { slug: string } }) => {
-
-	const {slug} = await params
+	const { slug } = await params
 	const post: Post = await GET_POST_BY_SLUG(slug)
 	const otherPosts: Post[] = await GET_OTHER_POSTS(slug)
 

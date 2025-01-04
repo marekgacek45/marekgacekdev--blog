@@ -10,20 +10,7 @@ import PostsGrid from '@/components/posts-grid'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-	title: 'Blog',
-	description:
-		"Explore Marek Gacek's blog for expert insights on web development, programming tutorials, and the latest in tech trends. Stay updated with tips, tools, and techniques.",
-	openGraph: {
-		title: 'Blog | Marek Gacek - Web Development & Programming',
-		description:
-			"Explore Marek Gacek's blog for expert insights on web development, programming tutorials, and the latest in tech trends. Stay updated with tips, tools, and techniques.",
-		type: 'website',
-		locale: 'en_US',
-		url: 'https://marekgacekdev.pl',
-		siteName: 'Marek Gacek - FullStack Developer',
-	},
-}
+
 
 export default async function Blog() {
 	const posts: Post[] = await GET_ALL_POSTS()
